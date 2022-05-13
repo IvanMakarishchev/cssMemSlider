@@ -29,7 +29,8 @@ html {
 }
 
 .wrapper {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 84em;
     margin: 0 auto;
     overflow: hidden;
@@ -39,30 +40,32 @@ s {
     display: none;
 }
 
-.container {
+.slider {
     position: relative;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     width: 600%;
-    transition: 0.5s ease-in-out;
+    transition: 1s ease-in-out;
 }
 
-.slider-image-container {
+.container {
     display: flex;
     flex-wrap: nowrap;
+    column-gap: 0.15em;
+    width: 100%;
+    overflow: hidden;
 }
 
 .slider-item {
     width: 100%;
+    border-radius: 0.6em;
+    overflow: hidden;
 }
 
 img {
-    border-radius: 0.6em;
     display: block;
     width: 100%;
-    flex-basis: content;
-    overflow: hidden;
 }
 
 .slider-controls {
@@ -70,7 +73,25 @@ img {
     justify-content: space-between;
     flex-wrap: nowrap;
     width: fit-content;
-    margin: 0 auto;
+    margin-left: auto;
+}
+
+.bottom {
+    display: flex;
+    width: 100%;
+}
+
+.desc-box {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    width: 600%;
+    transition: 1s ease-in-out;
+}
+
+.desc-item {
+    flex-shrink: 0;
+    width: 100%;
 }
 
 .control-box {
@@ -97,18 +118,25 @@ img {
     height: 0.5em;
 }
 
-#s1:target ~ .container { transform: translateX(0%); }
-#s2:target ~ .container { transform: translateX(calc(100% / 6 * (-1))); }
-#s3:target ~ .container { transform: translateX(calc(200% / 6 * (-1))); }
-#s4:target ~ .container { transform: translateX(calc(300% / 6 * (-1))); }
-#s5:target ~ .container { transform: translateX(calc(400% / 6 * (-1))); }
-#s6:target ~ .container { transform: translateX(calc(500% / 6 * (-1))); }
+#s1:target ~ .slider { transform: translateX(0%); }
+#s2:target ~ .slider { transform: translateX(calc(100% / 6 * (-1))); }
+#s3:target ~ .slider { transform: translateX(calc(200% / 6 * (-1))); }
+#s4:target ~ .slider { transform: translateX(calc(300% / 6 * (-1))); }
+#s5:target ~ .slider { transform: translateX(calc(400% / 6 * (-1))); }
+#s6:target ~ .slider { transform: translateX(calc(500% / 6 * (-1))); }
 
-#s1:target ~ .slider-controls *>#control-1,
-#s2:target ~ .slider-controls *>#control-2,
-#s3:target ~ .slider-controls *>#control-3,
-#s4:target ~ .slider-controls *>#control-4,
-#s5:target ~ .slider-controls *>#control-5,
-#s6:target ~ .slider-controls *>#control-6 {
+#s1:target ~ .bottom >* .desc-box { transform: translateX(0%); }
+#s2:target ~ .bottom >* .desc-box { transform: translateX(100%); }
+#s3:target ~ .bottom >* .desc-box { transform: translateX(200%); }
+#s4:target ~ .bottom >* .desc-box { transform: translateX(300%); }
+#s5:target ~ .bottom >* .desc-box { transform: translateX(400%); }
+#s6:target ~ .bottom >* .desc-box { transform: translateX(500%); }
+
+#s1:target ~ .bottom *>#control-1,
+#s2:target ~ .bottom *>#control-2,
+#s3:target ~ .bottom *>#control-3,
+#s4:target ~ .bottom *>#control-4,
+#s5:target ~ .bottom *>#control-5,
+#s6:target ~ .bottom *>#control-6 {
     background-color: var(--main-color);
 }
