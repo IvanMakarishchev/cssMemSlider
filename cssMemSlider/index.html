@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Mem Slider</title>
+    <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -13,30 +14,52 @@
     </header>
     <main class="main">
         <div class="wrapper">
-            <div class="inner">
-                <div class="slider_image_container">
-                    <div id="image_1" class="slider_image"></div>
-                    <div id="image_2" class="slider_image"></div>
-                    <div id="image_3" class="slider_image"></div>
-                    <div id="image_4" class="slider_image"></div>
-                    <div id="image_5" class="slider_image"></div>
-                    <div id="image_6" class="slider_image"></div>
+            <div class="container">
+                <div class="slider-image-container">
+                    <div class="slider-item">
+                        <img src="./assets/images/image_1.jpg" alt="" id="image-1">
+                        <div id="description-1" class="description">Slider 1 description</div>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./assets/images/image_2.jpg" alt="" id="image-2">
+                        <div id="description-2" class="description">Slider 2 description</div>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./assets/images/image_3.jpg" alt="" id="image-3">
+                        <div id="description-3" class="description">Slider 3 description</div>
+                    </div>
+                    <div class="slider-item">
+                        <img src="./assets/images/image_4.jpg" alt="" id="image-4">
+                        <div id="description-4" class="description">Slider 4 description</div>
+                    </div>                    
+                    <div class="slider-item">
+                        <img src="./assets/images/image_5.jpg" alt="" id="image-5">
+                        <div id="description-5" class="description">Slider 5 description</div>
+                    </div>                    
+                    <div class="slider-item">
+                        <img src="./assets/images/image_6.jpg" alt="" id="image-6">
+                        <div id="description-6" class="description">Slider 6 description</div>
+                    </div>
                 </div> 
-                <div class="slider_description">
-                    <div id="description_1" class="description">Slider 1 description</div>
-                    <div id="description_2" class="description">Slider 2 description</div>
-                    <div id="description_3" class="description">Slider 3 description</div>
-                    <div id="description_4" class="description">Slider 4 description</div>
-                    <div id="description_5" class="description">Slider 5 description</div>
-                    <div id="description_6" class="description">Slider 6 description</div>
+            </div>
+            <div class="slider-controls">
+                <div class="control-box">
+                    <div id="control-1" class="control-item active"></div>                    
                 </div>
-                <div class="slider_controls">
-                    <div id="control_1" class="control_item"></div>
-                    <div id="control_2" class="control_item"></div>
-                    <div id="control_3" class="control_item"></div>
-                    <div id="control_4" class="control_item"></div>
-                    <div id="control_5" class="control_item"></div>
-                    <div id="control_6" class="control_item"></div>
+                <div class="control-box">
+                    <div id="control-2" class="control-item"></div>                    
+                </div>
+                <div class="control-box">
+                    <div id="control-3" class="control-item"></div>                    
+                </div>
+                <div class="control-box">
+                    <div id="control-4" class="control-item"></div>                    
+                </div>
+                <div class="control-box">
+                    <div id="control-5" class="control-item"></div>                    
+                </div>
+                <div class="control-box">
+                    <div id="control-6" class="control-item"></div>                    
                 </div>
             </div>
         </div>
