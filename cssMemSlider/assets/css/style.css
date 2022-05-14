@@ -9,10 +9,6 @@
     --hover-color: rgb(199, 94, 190);
 }
 
-html {
-    font-size: var(--base-font-size);
-}
-
 body {
     background: linear-gradient(90deg, #81412e, #721d3e, #125772, #0e7c62, #81422f);
 	background-size: 400% 100%;
@@ -28,6 +24,8 @@ body {
 	}
 }
 
+/* header style */
+
 .header {
     display: block;
     width: 100vw;
@@ -41,6 +39,8 @@ body {
     margin: 0 auto;
     color: var(--back-color);
 }
+
+/* main style */
 
 .main {
     display: block;
@@ -61,9 +61,14 @@ body {
     box-shadow: 0 1em 2em rgba(0, 0, 0, 0.2);
 }
 
-s {
-    display: none;
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow: hidden;
 }
+
+/* slider style */
 
 .slider {
     position: relative;
@@ -71,26 +76,34 @@ s {
     justify-content: flex-start;
     flex-wrap: wrap;
     width: 600%;
-    transition: 1s ease-in-out;
-}
-
-.container {
-    display: flex;
-    flex-wrap: nowrap;
-    /* column-gap: 0.15em; */
-    width: 100%;
-    /* margin: 1.25em; */
-    overflow: hidden;
-}
-
-.slider-item {
-    /* width: calc(100% - 1.25em); */
-    overflow: hidden;
-    /* margin: 0.2em 0.2em 0; */
+    transition: 0.5s ease-in-out;
 }
 
 img {
-    display: block;
+    width: 100%;
+}
+
+/* bottom style */
+
+.bottom {
+    display: flex;
+    align-items: center;
+    margin: 2em 2em;
+}
+
+.desc-box {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    transition: 0.5s ease-in-out;
+    font-family: var(--common-font);
+    font-size: 2em;
+}
+
+.desc-item {
+    flex-shrink: 0;
     width: 100%;
 }
 
@@ -100,27 +113,6 @@ img {
     flex-wrap: nowrap;
     width: fit-content;
     margin-left: auto;
-}
-
-.bottom {
-    display: flex;
-    margin: 2em 2em;
-}
-
-.desc-box {
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: nowrap;
-    align-items: center;
-    width: 600%;
-    transition: 1s ease-in-out;
-    font-family: var(--common-font);
-    font-size: 2em;
-}
-
-.desc-item {
-    flex-shrink: 0;
-    width: 100%;
 }
 
 .control-box {
@@ -147,6 +139,12 @@ img {
     height: 0.625em;
 }
 
+/* slider controls */
+
+s {
+    display: none;
+}
+
 #s1:target ~ .slider { transform: translateX(0%); }
 #s2:target ~ .slider { transform: translateX(calc(100% / 6 * (-1))); }
 #s3:target ~ .slider { transform: translateX(calc(200% / 6 * (-1))); }
@@ -169,8 +167,6 @@ img {
 #s6:target ~ .bottom *>.control-box:hover #control-6 {
     border: 0.15rem solid var(--hover-color);
     background-color: var(--hover-color);
-    width: 1em;
-    height: 1em;
 }
 
 #s1:target ~ .bottom *>#control-1,
