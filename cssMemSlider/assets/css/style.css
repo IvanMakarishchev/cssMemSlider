@@ -49,6 +49,7 @@ body {
     width: 100vw;
     height: fit-content;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .wrapper {
@@ -77,7 +78,6 @@ body {
     justify-content: flex-start;
     width: 600%;
     transition: 0.5s ease-in-out;
-    overflow: hidden;
 }
 
 img {
