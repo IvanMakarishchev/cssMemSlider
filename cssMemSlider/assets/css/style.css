@@ -73,7 +73,6 @@ body {
 /* slider style */
 
 .slider {
-    position: relative;
     display: flex;
     justify-content: flex-start;
     width: 600%;
