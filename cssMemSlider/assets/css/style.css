@@ -76,7 +76,6 @@ body {
     position: relative;
     display: flex;
     justify-content: flex-start;
-    flex-wrap: wrap;
     width: 600%;
     transition: 0.5s ease-in-out;
 }
@@ -96,7 +95,6 @@ img {
 .desc-box {
     display: flex;
     flex-direction: row-reverse;
-    flex-wrap: nowrap;
     align-items: center;
     width: 100%;
     transition: 0.5s ease-in-out;
